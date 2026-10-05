@@ -11,8 +11,14 @@ Butun ilova bitta `index.html` faylida ishlaydi. Server va baza kerak emas — m
 | `public/` | **Saytga joylanadigan qism**: `index.html` (ilova), `manifest.webmanifest`, `sw.js`, `icons/` |
 | `render.yaml` | Render uchun tayyor sozlama (static site + xavfsizlik sarlavhalari) |
 | `vercel.json` | Vercel uchun tayyor sozlama |
-| `tests/` | 80 ta avtomatik test: `e2e_test.py` (62 — funksiyalar) va `anim_test.py` (18 — animatsiyalar) |
+| `tests/` | 97 ta avtomatik test: `e2e_test.py` (62 — funksiyalar), `anim_test.py` (18 — animatsiyalar), `desktop_test.py` (17 — noutbuk/planshet) |
 | `docs/` | Hisob qoidalari va server versiyasi topshirig‘i — saytda ochiq bo‘lmaydi |
+
+## Ekranlar
+
+- **Telefon (700 px gacha):** pastki menyu, ixcham ro‘yxatlar.
+- **Planshet (700–1023 px):** markazlashgan kontent, kartalar 4 ustunda.
+- **Noutbuk (1024 px dan):** chap tomonda doimiy menyu, tovarlar 2 ustunda, sotuv sahifasi ikki ustunli (savatcha va to‘lov), hisobot 2 ustunda, magazin 5 ustunli katalog, kirish sahifasi logo va forma bilan ikki qismli.
 
 ## Tez boshlash
 
@@ -76,6 +82,7 @@ Ilovada quyidagi himoyalar bor:
 pip install playwright && playwright install chromium
 python tests/e2e_test.py
 python tests/anim_test.py
+python tests/desktop_test.py
 ```
 
-Natija: 62 + 18 = 80 test — birinchi sozlash, login bloki, xodimlar va parollar, huquqlar, tahrirlash va o‘chirish, qaytim, qarz muddati, bekor qilish, kassa, zaxira, XSS va 360/390/430 px ekranlar.
+Natija: 62 + 18 + 17 = 97 test — birinchi sozlash, login bloki, xodimlar va parollar, huquqlar, tahrirlash va o‘chirish, qaytim, qarz muddati, bekor qilish, kassa, zaxira, XSS va 360/390/430 px ekranlar.
